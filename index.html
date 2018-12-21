@@ -25,7 +25,18 @@
 
     <!-- Custom styles for this template -->
     <link href="css/new-age.min.css" rel="stylesheet">
-
+    <script>
+      /**
+        * Plays a sound using the HTML5 audio tag. Provide mp3 and ogg files for best browser support.
+        * @param {string} filename The name of the file. Omit the ending!
+        */
+      function playSound(filename){
+        var mp3Source = '<source src="' + filename + '.mp3" type="audio/mpeg">';
+        var oggSource = '<source src="' + filename + '.ogg" type="audio/ogg">';
+        var embedSource = '<embed hidden="true" autostart="true" loop="false" src="' + filename +'.mp3">';
+        document.getElementById("sound").innerHTML='<audio autoplay="autoplay">' + mp3Source + oggSource + embedSource + '</audio>';
+      }
+    </script>
   </head>
 
   <body id="page-top">
@@ -98,6 +109,7 @@
     </section>
 
     <section>
+      <input id="startTime">Start</input>
       <button id="game-start">Start</button>
     </section>
 
@@ -214,6 +226,10 @@
         </ul>
       </div>
     </footer>
+    <button onclick="playSound('midas');">Play</button>  
+    <div id="sound"></div>
+    <button id="rosh">Rosh</button>  
+    <div id="sound"></div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -221,14 +237,11 @@
 
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="/path/to/howler.js"></script>
-    <script>
-        var sound = new Howl({
-          src: ['sound.webm', 'sound.mp3']
-        });
-    </script> 
+
     <!-- Custom scripts for this template -->
     <script src="js/new-age.js"></script>
+    <script src="web-rosh.js"></script>
+    <script src="web-reminder.js"></script>
 
   </body>
 

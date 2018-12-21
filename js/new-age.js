@@ -39,50 +39,37 @@
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
 
-  const startTime = null;
-
-
-
-const {Howl, Howler} = require('howler');
-
-var sound = new Howl({
-  src: ['http://www.music.helsinki.fi/tmt/opetus/uusmedia/esim/a2002011001-e02.wav']
-});
- 
-sound.play();
-
 })(jQuery); // End of use strict
 
-$(() => {
-  console.log('x is ', sound);
+// $(() => {
+//   console.log('x is ', sound);
   
   
-  $("#game-start").on('click', () => {
-    console.log('clicked');
-    // var audio = document.getElementById("audio");
-    // audio.play();
+//   $("#game-start").on('click', () => {
+//     console.log('clicked');
+//     // var audio = document.getElementById("audio");
+//     // audio.play();
 
-    // new Audio('http://www.music.helsinki.fi/tmt/opetus/uusmedia/esim/a2002011001-e02.wav').play()
-    // new Audio('boopsnoot.wav').play()
-    // new Audio('../boopsnoot.wav').play()
-    // new Audio('../boopsnoot.wav').play()
-    new Audio('http://www.music.helsinki.fi/tmt/opetus/uusmedia/esim/a2002011001-e02.wav')
-    new Audio('boopsnoot.wav')
-    new Audio('../boopsnoot.wav')
-    new Audio('../boopsnoot.wav')
+//     // new Audio('http://www.music.helsinki.fi/tmt/opetus/uusmedia/esim/a2002011001-e02.wav').play()
+//     // new Audio('boopsnoot.wav').play()
+//     // new Audio('../boopsnoot.wav').play()
+//     // new Audio('../boopsnoot.wav').play()
     
-    setTimeout(() => {
-      console.log('5 minutes is up');
-    }, 5000)
-  })
+//     setTimeout(() => {
+//       console.log('5 minutes is up');
+//       const audio = new Audio('midas.mp3');
+//       console.log('audio is ', audio);
+//       audio.play();
+//     }, 5000)
+//   })
 
-  addSound(2, 5000, './sound.mp3');
+  // addSound(2, 5000, './sound.mp3');
 
 
-  player.play('./sound.mp3', (err) => {
-      if (err) console.log(`Could not play sound: ${err}`);
-  });
-});
+  // player.play('./sound.mp3', (err) => {
+  //     if (err) console.log(`Could not play sound: ${err}`);
+  // });
+// });
 
 
 
